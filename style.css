@@ -20,7 +20,34 @@ body{
   display: none;
 }
 
+.navmenu {
+  overflow: hidden;
+  background-color: black;
+  border-radius: 0px 0px 25px 25px;
+  padding: 10px 30px;
+}
 
+.navmenu a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Century Gothic";
+  font-size: 16px;
+}
+
+.navmenu a:hover {
+  background-color:  #ccccff;
+  color: white;
+  text-shadow: 1px 1px 0  #b3b3ff;
+}
+
+.navmenu a .active {
+  color: #b3b3ff;
+}
+
+/* Loader css */
 .holder {
   position: absolute;
   left: 0%;
@@ -89,7 +116,7 @@ body{
 
 
 
-
+/* klokke */
 .clock {
   height: 20vh;
   color: black;

@@ -4,7 +4,7 @@ function loaderSpinner() {
 var wHeight = $(window).height();
 var wWidth = $(window).width();
 var i = 0;
-/*Center loader on half screen */
+/* Center loader on half screen */
 loader.css({
     top: wHeight / 2 - 2.5,
     left: wWidth / 2 - 200
@@ -27,11 +27,10 @@ loader.css({
     })
   }
       
-      /* This line hide loader and show content */
+      /* content */
       setTimeout(function(){
         $('.content').fadeIn("slow");
         (loader).fadeOut("fast");
-        /*Set time in milisec */
       },3500);
     });
 
@@ -61,34 +60,3 @@ $(function() {
 
 
 
-
-
-
-
-$(document).ready(function() {
-  // Setup our variables
-  var cH = $('#crosshair-h'),
-      cV = $('#crosshair-v');
-  
-  $(this).on('mousemove touchmove', function(e) {
-    var x = e.pageX - 1;
-    var y = e.pageY - 1;
-    cH.css('top', e.pageY);
-    cV.css('left', e.pageX);
-    
-    $('#mousepos').css({
-      top: e.pageY + 'px',
-      left: e.pageX + 'px'
-    }, 800);
-    $('#mousepos').text( "X: " + x + "px, Y: " + y + "px");
-    e.stopPropagation();
-  });
-  
-  // Anchor Hover Effects
-  $("a").hover(function() {
-    $(".hair").stop().css({borderColor: "#fff"}, 800)},
-     function() {
-    $(".hair").stop().css({borderColor: "black"},800)
-  });
-  e.stopPropagation();
-});
